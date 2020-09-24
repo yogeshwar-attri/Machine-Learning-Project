@@ -15,6 +15,28 @@ The goal for this project is to use machine learning techniques and algorithms t
 ## SVM
 >The sklearn algorithm used to run our classification for SVM was the SVC library. We wanted to achieve a multi-class prediction that can be comparable to the other linear classifiers and so we used a linear kernel for our implementation. When using a radial basis function for our kernel, we achieve subpar accuracies and ROC graphs so sticking with a linear kernel was ideal. Our hyper-parameter for this algorithm was the variable C which is the regularization parameter or slack. We used C values: 0.01, 0.1,0.5,1,2.5,5, and 10 to see if there was a general trend occurring. After running the algorithm, we found that the higher the value C was, the longer it took for the algorithm to fit the training data. At the same time, the larger the training data, the longer SVM took to fit as well. In our implementation we attempted to reduce the amount of time the algorithm took to fit while achieve decent accuracy scores so we settled with a sample size of 1500 (1000 train, 500 test). 
 >After running the algorithms and doing k fold cross validation for these different C values, we plotted accuracy scores. From the below graph we see that C=5 has the highest cross validation accuracy and hence we use that in the final model.
+>![](image/4.png)
+>*For C=5 we run SVM and get 79% test accuracy. The ROC curve is seen below:*
 >![](image/5.png)
-### For C=5 we run SVM and get 79% test accuracy. The ROC curve is seen below:
+## The k-nearest neighbors	
+>For the Knn Model we have used ball tree algorithm using third party code, then we have implemented K fold cross validation from scratch, and we are using 5 folds and then we are taking mean of 5 accuracies for each fold corresponding to each values of k. We are trying to find best value of K in order to get highest accuracy value. We have tried k values range from 2 to 9. Out of these values we got highest accuracy for k =5 i.e. 73.2 %
 >![](image/6.png)
+>After finding best hyperparameter i.e. k=5 by plotting mean values of accuracy at each value of k, we have implemented ROC curve for Knn algorithm using k=5 which tell us about our final three classes (‘Checkout’, ’no show’ and ‘canceled’)  prediction results
+>![](image/7.png)
+# Unsupervised Learning:
+>As it is not possible to plot all feature values on a 2-D plot so we have done PCA (component = 2) to convert all columns into two (PC1 and PC2)
+We have implemented unsupvervised learning on test data (due to small size) and we have used two different algorithm namely ‘Kmeans’ and ‘MiniBatchKmean’.
+We have used ‘Elbow Method’ and ‘silhoutte plot’ for finding best hyperparameter (number of cluster) 
+>>a)	Elbow Method: The method consists of plotting the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
+As we can see from left graph that elbow is at k=4.
+>>b)	Silhouette plot: tell us about interpretation and validation of consistency within clusters of data
+>As we can see from right plot that clusters are stable and consistent after k=4
+>![](image/8.png)
+## K-means: 
+>We have used k means at n (number of clusters) =4 and 5.  To compare the results we have used another algorithm minibatch k means at n=4  the difference is that in mini-batch k-means the most computationally costly step is conducted on only a random sample of observations as opposed to all observations but results are nearly same.
+>*Kmeans with 4 clusters*
+>![](image/9.png)
+>*MiniBatch-Kmeans with 4 clusters*
+>![](image/10.png)
+>*MiniBatch-Kmeans with 5 clusters*
+>![](image/11.png)
