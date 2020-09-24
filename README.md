@@ -43,9 +43,11 @@ Almost all algorithms have been written from scratch including Perceptron, Adabo
 >As it is not possible to plot all feature values on a 2-D plot so we have done PCA (component = 2) to convert all columns into two (PC1 and PC2)
 We have implemented unsupvervised learning on test data (due to small size) and we have used two different algorithm namely ‘Kmeans’ and ‘MiniBatchKmean’.
 We have used ‘Elbow Method’ and ‘silhoutte plot’ for finding best hyperparameter (number of cluster) 
->>a)	Elbow Method: The method consists of plotting the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
-As we can see from left graph that elbow is at k=4.
->>b)	Silhouette plot: tell us about interpretation and validation of consistency within clusters of data
+## >>a)	Elbow Method: 
+>The method consists of plotting the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
+>As we can see from left graph that elbow is at k=4.
+## >>b)  Silhouette plot: 
+>tell us about interpretation and validation of consistency within clusters of data
 >As we can see from right plot that clusters are stable and consistent after k=4
 
 >![](image/8.png)
