@@ -1,3 +1,7 @@
 # Machine-Learning-Project
 The goal for this project is to use machine learning techniques and algorithms to develop a good prediction model for hotel cancellations and find. The data set is named hotel booking demand and can be found in the following link: https://www.kaggle.com/jessemostipak/hotel-booking-demand. The data set includes approximately 120,000 samples with 32 features. Some of the features included are the number of adults, number of children, number of weeknights booked by the guest, if they are a repeated guest, etc. I have taken the reservation status as our labels. The remaining features are transformed into a numerical representation depending on the algorithm run.
+# Perceptron (using Bootstrapping for Cross Validation)
+Linear multiclass perceptron was used. A mean_list and eta_list was created to store average accuracy score and value of the hyperparameter eta during each run of the loop. Here eta represents the constant by which the updates are multiplied during a run of Perceptron.
+Bootstrapping is done 5 times for each value of eta. Bootstrapping is done such that 80% of training data is stored in ‘B_train’, and remaining samples not present in ‘B_train’ are stored in cross validation set ‘B_cross’. 
+The perceptron is fit on ‘B_train’ and tested on ‘B_cross’. The resulting accuracy score is stored and plotted vs eta value to obtain the below figure.
 ![](image/1.png)
