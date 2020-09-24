@@ -5,7 +5,8 @@ The goal for this project is to use machine learning techniques and algorithms t
 >Bootstrapping is done 5 times for each value of eta. Bootstrapping is done such that 80% of training data is stored in ‘B_train’, and remaining samples not present in ‘B_train’ are stored in cross validation set ‘B_cross’. 
 >The perceptron is fit on ‘B_train’ and tested on ‘B_cross’. The resulting accuracy score is stored and plotted vs eta value to obtain the below figure.
 >![](image/1.png)
-From the above graph we see that accuracy is highest for a value of eta=0.4. But since I was Bootstrapping, we can expect slightly different values each time we run the code.
+
+>From the above graph we see that accuracy is highest for a value of eta=0.4. But since I was Bootstrapping, we can expect slightly different values each time we run the code.
 >Using value of eta=0.4 we trained the model on entire training data. Then we ran it on the Test set and obtained a prediction accuracy of 75.37%.
 ## Adaboost
 >For Adaboost we used decision stump as our weak learner. The hyperparameter tuned here was #base learners ranging from 1 to 50. We used k fold (k=5) cross validation to check how many base learners we can use to maximize cross validation prediction accuracy. From the below graph we can see the curve flattens out around 20 base learners. So, we use that value of hyperparameter in our final model.
