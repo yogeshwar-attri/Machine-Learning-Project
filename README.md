@@ -1,5 +1,9 @@
 # Machine-Learning-Project
-Almost all algorithms have been written from scratch including Perceptron, Adaboost, SVM, cross validation, ROC etc.
+>Used hotel booking data (Kaggle) to assess the risk of accepting an individual or group room reservation
+>Created Bootstrapping, K folds, ROC curve Algorithms from scratch (Without using Sklearn)
+>Implemented and compared the results of Adaboost, Perceptron, SVM and Knn Models 
+>Implemented K-means after finding number of clusters using elbow and Silhouette Method 
+
 ## Introduction
 >The goal for this project is to use machine learning techniques and algorithms to develop a good prediction model for hotel cancellations and find. The data set is named hotel booking demand and can be found in the following link: https://www.kaggle.com/jessemostipak/hotel-booking-demand. The data set includes approximately 120,000 samples with 32 features. Some of the features included are the number of adults, number of children, number of weeknights booked by the guest, if they are a repeated guest, etc. I have taken the reservation status as our labels. The remaining features are transformed into a numerical representation depending on the algorithm run.
 ## Perceptron (using Bootstrapping for Cross Validation)
