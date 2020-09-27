@@ -1,9 +1,8 @@
 # Machine-Learning-Project
 
 >Used hotel booking data (Kaggle) to assess the risk of accepting an individual or group room reservation
->Created Bootstrapping, K folds, ROC curve Algorithms from scratch (Without using Sklearn)
->Implemented and compared the results of Adaboost, Perceptron, SVM and Knn Models
->Implemented K-means after finding number of clusters using elbow and Silhouette Method 
+
+>Created Bootstrapping, K folds, ROC curve Algorithms from scratch (Without using Sklearn).Implemented and compared the results of Adaboost, Perceptron, SVM and Knn Models. Also, Implemented K-means after finding number of clusters using elbow and Silhouette Method 
 
 ## Introduction
 >The goal for this project is to use machine learning techniques and algorithms to develop a good prediction model for hotel cancellations and find. The data set is named hotel booking demand and can be found in the following link: https://www.kaggle.com/jessemostipak/hotel-booking-demand. The data set includes approximately 120,000 samples with 32 features. Some of the features included are the number of adults, number of children, number of weeknights booked by the guest, if they are a repeated guest, etc. I have taken the reservation status as our labels. The remaining features are transformed into a numerical representation depending on the algorithm run.
@@ -48,10 +47,10 @@
 >As it is not possible to plot all feature values on a 2-D plot so we have done PCA (component = 2) to convert all columns into two (PC1 and PC2)
 We have implemented unsupvervised learning on test data (due to small size) and we have used two different algorithm namely ‘Kmeans’ and ‘MiniBatchKmean’.
 We have used ‘Elbow Method’ and ‘silhoutte plot’ for finding best hyperparameter (number of cluster) 
-## >>a)	Elbow Method: 
+## a)	Elbow Method: 
 >The method consists of plotting the explained variation as a function of the number of clusters and picking the elbow of the curve as the number of clusters to use.
 >As we can see from left graph that elbow is at k=4.
-## >>b)  Silhouette plot: 
+## b)  Silhouette plot: 
 >tell us about interpretation and validation of consistency within clusters of data
 >As we can see from right plot that clusters are stable and consistent after k=4
 
