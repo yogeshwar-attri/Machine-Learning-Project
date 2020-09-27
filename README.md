@@ -1,7 +1,10 @@
 # Machine-Learning-Project
 >Used hotel booking data (Kaggle) to assess the risk of accepting an individual or group room reservation
+
 >Created Bootstrapping, K folds, ROC curve Algorithms from scratch (Without using Sklearn)
+
 >Implemented and compared the results of Adaboost, Perceptron, SVM and Knn Models 
+
 >Implemented K-means after finding number of clusters using elbow and Silhouette Method 
 
 ## Introduction
